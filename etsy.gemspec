@@ -2,11 +2,11 @@
 require File.expand_path('../lib/etsy/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Patrick Reagan", "Katrina Owen"]
-  gem.email         = ["reaganpr@gmail.com", "katrina.owen@gmail.com"]
+  gem.authors       = ["Patrick Reagan", "Katrina Owen", "Timothy Fisher"]
+  gem.email         = ["reaganpr@gmail.com", "katrina.owen@gmail.com", "timothyf@gmail.com"]
   gem.description   = %q{A friendly Ruby interface to the Etsy API}
   gem.summary       = %q{Provides a friendly ruby-like wrapper for the Etsy API}
-  gem.homepage      = "http://github.com/kytrinyx/etsy"
+  gem.homepage      = "http://github.com/timothyf/etsy"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
