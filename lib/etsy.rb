@@ -75,6 +75,7 @@ module Etsy
     attr_writer :permission_scopes
   end
 
+
   # Make Etsy.api_key and Etsy.api_secret global but also local to threads
   #
   def self.api_key
@@ -223,4 +224,5 @@ module Etsy
   def self.deprecate(message)
     puts "DEPRECATED: #{message}."
   end
+
 end
