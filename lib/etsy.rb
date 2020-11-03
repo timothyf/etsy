@@ -161,8 +161,8 @@ module Etsy
 
   # Find a user by username.  See Etsy::User for more information.
   #
-  def self.user(username)
-    User.find(username)
+  def self.user(username, access_token, access_secret)
+    User.find(username, access_token, access_secret)
   end
 
   # Convenience method for accessing the authenticated user's own user information. Requires

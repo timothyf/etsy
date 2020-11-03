@@ -31,14 +31,12 @@ module Etsy
     #   Etsy::User.find(['reagent', 'littletjane'])
     #
     def self.find(*identifiers_and_options)
-      puts "******* User.find"
       find_one_or_more('users', identifiers_and_options)
     end
 
     # Retrieve the currently authenticated user.
     #
     def self.myself(token, secret, options = {})
-      puts "********* User.myself"
       find('__SELF__', {:access_token => token, :access_secret => secret}.merge(options))
     end
 
