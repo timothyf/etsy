@@ -9,6 +9,7 @@ module Etsy
     # Perform a GET request for the resource with optional parameters - returns
     # A Response object with the payload data
     def self.get(resource_path, parameters = {})
+      puts "**** Request.get"
       request = Request.new(resource_path, parameters)
       Response.new(request.get)
     end
@@ -22,13 +23,13 @@ module Etsy
       request = Request.new(resource_path, parameters)
       Response.new(request.put)
     end
-    
+
     def self.delete(resource_path, parameters = {})
       request = Request.new(resource_path, parameters)
       Response.new(request.delete)
     end
-    
-    
+
+
 
     # Create a new request for the resource with optional parameters
     def initialize(resource_path, parameters = {})
@@ -75,7 +76,7 @@ module Etsy
     def put
       client.put(endpoint_url)
     end
-    
+
     def delete
       client.delete(endpoint_url)
     end

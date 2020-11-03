@@ -183,12 +183,15 @@ module Etsy
   # either be passed manually or from the params in the callback URL.
   #
   def self.access_token(request_token, request_secret, verifier)
+    puts "****** Etsy.access_token 0"
     @access_token = begin
+      puts "****** Etsy.access_token 1"
       client = Etsy::SecureClient.new({
         :request_token  => request_token,
         :request_secret => request_secret,
         :verifier       => verifier
       })
+      puts "****** Etsy.access_token 2"
       client.client
     end
   end
